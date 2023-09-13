@@ -1,0 +1,61 @@
+
+const readline = require('readline');
+let info = {};
+
+const rl = readline.createInterface({
+    input: process.stdin, // Read from standard input (keyboard)
+    output: process.stdout // Write to standard output (console)
+});
+let menu_opt;
+let name;
+let quantity;
+let bought;
+let grocery_list = {};
+let grocery_item = { "name": "test", "quantity": 0 };
+let grocery_item2 = { "name": "test", "quantity": 2 };
+grocery_list = { 0: grocery_item, 1: grocery_item2 };
+
+
+const add_name = () => {
+    return new Promise((resolve, reject) => {
+        rl.question('Enter Name: ', (answer) => {
+             name
+             resolve()
+        });
+    });
+};
+
+const add_item = () => {
+    return new Promise((resolve, reject) => {
+        rl.question('q2 What do you think of Node.js? ', (answer) => {
+            resolve()
+        });
+    });
+};
+const add_price = () => {
+    return new Promise((resolve, reject) => {
+        rl.question('q2 What do you think of Node.js? ', (answer) => {
+            resolve()
+        });
+    });
+};
+const add_Bought = () => {
+    return new Promise((resolve, reject) => {
+        rl.question('q2 What do you think of Node.js? ', (answer) => {
+            resolve()
+        });
+    });
+};
+
+
+const grocery_add = async () => {
+
+    await add_name()
+    await add_item()
+    await add_price()
+    await add_Bought()
+    rl.close()
+}
+
+grocery_add()
+
